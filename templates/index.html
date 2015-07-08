@@ -1,0 +1,18 @@
+<html>
+    <style type="text/css">
+        body{
+            padding:30px;
+        }
+    </style>
+    <body>
+        Hello there !!<br/>
+        Welcome to taggerworks
+        <form method="POST" action="{{ url_for('taggerworks') }}">
+            <textarea type="textarea" cols="89" rows="15" name="document" placeholder="Paste you document here for scanning"></textarea><br/><hr/>
+            <input type="text" name="passcode" placeholder="passcode"/>
+            <input type="text" name="documentid" placeholder="optional documentID"/>
+            <input type="number" name="numtags" placeholder="passcode"/>
+            <input type="submit" name="submit"/>
+        </form>
+    </body>
+</html>
