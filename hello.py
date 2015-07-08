@@ -264,20 +264,13 @@ class Object:
         return json.dumps(self, default=lambda o: o.__dict__,sort_keys=False, indent=3)
 
 
-def mytagger(text,numtags):
-    import globgit
+def mytagger(text):
     import pickle
-    import sys
-    numtags = 6
-    leng = len(text)
-    
-        
-       
-        
     weights = pickle.load(open('data/dict.pkl', 'rb'))
 
     tagger = Tagger(Reader(), Stemmer(), Rater(weights))
-    generatedtags = tagger(text,numtags)
+    print "hellot sdfasd"
+    generatedtags = tagger(text)
     return generatedtags
 
 app = Flask(__name__)
@@ -291,12 +284,13 @@ def taggerworks():
         document = str(request.form['document'])
         passcode = str(request.form['passcode'])
         documentID = str(request.form['documentid'])
-        numtags = request.form['numtags']
+        print "Hello there"
+        #numtags = request.form['numtags']
         if passcode != "bangalore":
             return "Invalid Passcode"
         #output = subprocess.check_output("./tagger.py "+document, shell=True)
+        print "now now"
         output = mytagger(document)
-        list = []
         print output
         doc = Object()
         doc.footprint = "Tathagat Nawadia"
