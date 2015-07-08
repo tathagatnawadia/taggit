@@ -1,0 +1,3 @@
+$sudo easy_install stemming
+
+$sudo pip install flask
