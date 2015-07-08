@@ -5,6 +5,8 @@ Build using Python, Flask Framework and Stemmer
 
 Head over to https://tagme-tathagatnawadia.c9.io/
 
+Before cloning issue these commands to install flask and stemmer
 
-
+$sudo easy_install Stemming
+$sudo pip install flask
 
